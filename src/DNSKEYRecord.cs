@@ -55,7 +55,7 @@ namespace Makaretu.Dns
             }
         }
 
-#if (!NETSTANDARD14 && !NET45)
+#if NET6_0_OR_GREATER
         /// <summary>
         ///   Creates a new instance of the <see cref="DNSKEYRecord"/> class
         ///   from the specified ECDSA key.
