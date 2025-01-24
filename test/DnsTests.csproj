@@ -18,16 +18,16 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" PrivateAssets="all" />
-    <PackageReference Include="MSTest.TestAdapter" Version="3.7.0" PrivateAssets="all" />
-    <PackageReference Include="MSTest.TestFramework" Version="3.7.0" PrivateAssets="all" />
-    <PackageReference Include="coverlet.msbuild" Version="6.0.3" PrivateAssets="all" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.7.2" PrivateAssets="all" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.7.2" PrivateAssets="all" />
+    <PackageReference Include="coverlet.msbuild" Version="6.0.4" PrivateAssets="all" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' != 'netcoreapp2.1' And '$(TargetFramework)' != 'net462' And '$(TargetFramework)' != 'net481'">
+  <ItemGroup Condition="'$(TargetFramework)' != 'net462' And '$(TargetFramework)' != 'net481'">
 	<PackageReference Include="SimpleBase" Version="4.0.2" />
   </ItemGroup>
 
-  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1' Or '$(TargetFramework)' == 'net462' Or '$(TargetFramework)' == 'net481'">
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462' Or '$(TargetFramework)' == 'net481'">
     <PackageReference Include="SimpleBase" Version="2.1.0" />
   </ItemGroup>
 
