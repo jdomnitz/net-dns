@@ -30,7 +30,7 @@ namespace Makaretu.Dns
         {
             while (length > 0)
             {
-                var s = reader.ReadString();
+                var s = reader.ReadUTF8String();
                 Strings.Add(s);
                 length -= Encoding.UTF8.GetByteCount(s) + 1;
             }
@@ -52,7 +52,7 @@ namespace Makaretu.Dns
         {
             foreach (var s in Strings)
             {
-                writer.WriteString(s);
+                writer.WriteStringUTF8(s);
             }
         }
 
